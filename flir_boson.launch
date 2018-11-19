@@ -1,0 +1,7 @@
+<launch>
+  <node name="boson_raw_command_server" pkg="flir_boson" type="boson_raw_command_server">
+    <param name="serial_port" type="string" value="/dev/ttyACM0" />
+    <param name="baudrate" type="string" value="921600" />
+  </node>
+  <node name="boson_driver" pkg="flir_boson" type="boson_driver" />
+</launch>
