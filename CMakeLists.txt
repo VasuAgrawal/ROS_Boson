@@ -217,3 +217,5 @@ add_dependencies(boson_driver flir_boson_gencpp)
 # Boson service node
 add_executable(boson_raw_command_server src/raw_command_server.cpp src/bytes.cpp src/serial.cpp)
 target_link_libraries(boson_raw_command_server ${catkin_LIBRARIES})
+add_dependencies(boson_raw_command_server flir_boson_generate_messages_cpp)
+add_dependencies(boson_raw_command_server flir_boson_gencpp)
